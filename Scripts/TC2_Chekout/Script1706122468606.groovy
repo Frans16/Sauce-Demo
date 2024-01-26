@@ -29,7 +29,7 @@ WebUI.callTestCase(findTestCase('TC1_Login'), [:], FailureHandling.STOP_ON_FAILU
 //get product
 TestObject inventoryData = findTestObject('Object Repository/AddToCart/div_inventoryItems')
 List<WebElement> elements = WebUI.findWebElements(inventoryData, 10)
-for(int i=0; i<elements.size(); i++) {
+for(def i=0; i<elements.size(); i++) {
 	if(elements.get(i).getText().equalsIgnoreCase("Sauce Labs Backpack")) {
 		elements.get(i).click()
 		break
